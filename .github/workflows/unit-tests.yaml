@@ -72,6 +72,7 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           echo "CC = $CC, CXX = $CXX, FLB_OPT = $FLB_OPT"
+          export MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion)
           brew update
           brew install bison flex || true
           ci/scripts/run-unit-tests.sh || true
