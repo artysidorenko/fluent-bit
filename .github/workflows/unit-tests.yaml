@@ -67,6 +67,7 @@ jobs:
           CC: ${{ matrix.compiler }}
           CXX: ${{ matrix.compiler }}
           FLB_OPT: ${{ matrix.flb_option }}
+          CFLAGS: -Wno-implicit-function-declaration
 
       - name: Run ci/s/run-unit-tests.sh on ${{ matrix.os }} with ${{ matrix.compiler }} - ${{ matrix.flb_option }}
         if: matrix.os == 'macos-latest'
