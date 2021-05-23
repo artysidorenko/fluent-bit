@@ -75,7 +75,7 @@ jobs:
           export MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion)
           brew update
           brew install bison flex || true
-          ci/scripts/run-unit-tests.sh || true
+          ci/scripts/run-unit-tests.sh
         env:
           CC: gcc
           CXX: g++
