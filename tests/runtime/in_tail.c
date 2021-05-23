@@ -231,7 +231,7 @@ void do_test(char *system, const char *target, int tExpected, int nExpected, ...
                               "format", "json",
                               NULL) == 0);
 
-    TEST_CHECK(flb_service_set(ctx, "Flush", "0.5",
+    TEST_CHECK(flb_service_set(ctx, "Flush", "1",
                                     "Grace", "1",
                                     NULL) == 0);
 
